@@ -17,7 +17,7 @@ def talk(text):
     engine.runAndWait()
 
 print("hello, i am Debjit's Alexa , how can i help you?")
-talk('Hello, I am Debjit\'s Alexa, how can i help you?')
+talk('hello, I am Debjit\'s Alexa, how can i help you?')
 def take_command():
     try:
         with sr.Microphone() as source:
@@ -47,7 +47,7 @@ def run_alexa():
     elif 'time' in command:
         time = datetime.datetime.now().strftime('%I:%M %p')
         talk('Current time is ' + time)
-    elif 'who is ' in command:
+    elif 'who is' in command:
         person = command.replace('who is', '')
         info = wikipedia.summary(person, 1)
         print(info)
@@ -59,12 +59,14 @@ def run_alexa():
     elif 'are you single' in command:
         talk('I am in a relationship with Debjit Purohit')
     elif 'tell me a joke' in command:
-        talk(pyjokes.get_joke())
+        jk = pyjokes.get_joke()
+        print(jk)
+        talk(jk)
     elif 'bye' in command: 
        name = command.replace('bye', '')
-       talk('bye' + name)
+       talk('good bye' + name)
     elif 'hello' in command: 
-        talk('hola')   
+        talk('hiii, how can i help you?')   
     elif 'who are you' in command:
         talk("I am a Debjit's Alexa")
     elif 'who made you' in command:

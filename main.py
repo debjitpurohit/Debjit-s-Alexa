@@ -63,7 +63,7 @@ def run_alexa():
         print(jk)
         talk(jk)
     elif 'bye' in command:
-       talk('good bye,take care')
+       talk('good bye')
     elif 'hello' in command: 
         talk('hiii, how can i help you?')   
     elif 'who are you' in command:

@@ -17,7 +17,7 @@ def talk(text):
     engine.runAndWait()
 
 print("hello, i am Debjit's Alexa , how can i help you?")
-talk('hello, I am Debjit\'s Alexa, how can i help you?')
+talk('hello, I am Debjit\'s Alexa , how can i help you?')
 def take_command():
     try:
         with sr.Microphone() as source:
@@ -52,8 +52,8 @@ def run_alexa():
         info = wikipedia.summary(person, 1)
         print(info)
         talk(info)
-    elif 'i love ' in command:
-        talk('I love you too')     
+    elif 'i love' in command:
+        talk('I love you too Debjit')     
     elif 'date' in command:
         talk( "sorry, i can't go, I have a headache")
     elif 'are you single' in command:
